@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script language="javaScript">
+            function shakescreen(n)
+            {
+                if (parent.moveBy)
+                {
+                    for (i = 10; i > 0; i--)
+                    {
+                        for (j = n; j > 0; j--)
+                        {
+                            parent.moveBy(0, i);
+                            parent.moveBy(i, 0);
+                            parent.moveBy(0, -i);
+                            parent.moveBy(-i, 0);
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" onClick="shakescreen(4)" value="Shake Browser Window">
+        </form>
+    </body>
+</html>
